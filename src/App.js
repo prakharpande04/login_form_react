@@ -1,13 +1,12 @@
 import React from 'react';
 import * as Components from './Components';
 
-
-export default App = () => {
+function App(){
   const[signIn,toggle] = React.useState(true);
 
   return (
     <Components.Container>
-      <Components.SignUpContainer signIn = {signIn}>
+      <Components.SignUpContainer signinIn = {signIn}>
         <Components.Form>
           <Components.Title>Create Account</Components.Title>
           <Components.Input type='text' placeholder='Name' />
@@ -17,10 +16,10 @@ export default App = () => {
         </Components.Form>
       </Components.SignUpContainer>
 
-      <Components.SignInContainer signIn = {signIn}>
+      <Components.SignInContainer signinIn = {signIn}>
         <Components.Form>
           <Components.Title>
-            sign In
+            Sign In
           </Components.Title>
           <Components.Input type='email' placeholder='Email' />
           <Components.Input type='password' placeholder='Password' />
@@ -57,4 +56,5 @@ export default App = () => {
 
     </Components.Container>
   )
-};
+}
+export default App;
